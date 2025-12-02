@@ -9,12 +9,28 @@
     <div class="col-3">
         <p>{{currentDate}}</p>
     </div>
+    <div class="col-3">
+        {{slectedState}}
+    </div>
 </div>
 <div class="row">
     <div class="col-3">
         <input type="text" [value]="firstName" class="form-control"/>
     </div>
     <div class="col-3">
+        <input type="text" [(ngModel)]="firstName">
+    </div>
+   
+    <div class="col-3">
         <input [type]="inputType">
+    </div>
+
+    <div class="col-3">
+        <select [(ngModel)]="slectedState">
+            <option value="Dhaka">Dhaka</option>
+            <option value="Tangail">Tangail</option>
+            <option value="Rajshahi">Rajshahi</option>
+            <option value="Rangpur">Rangpur</option>
+        </select>
     </div>
 </div>

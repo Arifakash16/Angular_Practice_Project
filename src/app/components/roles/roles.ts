@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-roles',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './roles.html',
   styleUrl: './roles.css',
 })
@@ -14,4 +15,5 @@ export class Roles {
   isActive: boolean = false;
   currentDate: Date = new Date();
   inputType: string = "radio";
+  slectedState: string = '';
 }

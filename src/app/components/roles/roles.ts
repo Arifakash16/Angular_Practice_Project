@@ -16,4 +16,14 @@ export class Roles {
   currentDate: Date = new Date();
   inputType: string = "radio";
   slectedState: string = '';
+
+  showWelcomeAlert()
+  {
+    alert("Welcome to Angular learning project");
+  }
+
+  showMessage(message: string)
+  {
+    alert(message);
+  }
 }

@@ -13,4 +13,5 @@ export class Roles {
   version: number = 24;
   isActive: boolean = false;
   currentDate: Date = new Date();
+  inputType: string = "radio";
 }

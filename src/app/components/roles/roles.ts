@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './roles.css',
 })
 export class Roles {
-
+  firstName: string = "Angular Learn";
+  angularVersion = "version-24";
+  version: number = 24;
+  isActive: boolean = false;
+  currentDate: Date = new Date();
 }

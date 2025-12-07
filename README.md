@@ -59,6 +59,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 - Data Binding(Interpolation{{}}, property binding[], two way data binging[(ngModel)], event binding)
 - Directive -> Structural(ngIf, ngFor) and attribute(ngClass, ngStyle)
 - Using processing bar before the data load from api call
+- Routing (routes, routerroutlet, routerLink, routerLinkActive)
 
 
 ## Additional Resources

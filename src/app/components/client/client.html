@@ -16,13 +16,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                        @for(item of clientList; track $index)
+                        {
+                            <tr>
+                                <td>{{$index + 1}}</td>
+                                <td>{{item.companyName}}</td>
+                                <td>{{item.contactPersonName}}</td>
+                                <td>{{item.contactNo}}</td>
+                                <td>{{item.city}}</td>
+                            </tr>
+                        }
+                        
                     </tbody>
                 </table>
             </div>
@@ -81,7 +85,7 @@
                         <button class="btn btn-secondary">Reset</button>
                     </div>
                     <div class="col-6 text-center">
-                        <button class="btn btn-success">Save</button>
+                        <button class="btn btn-success" >Save</button>
                     </div>
                 </div>
             </div>

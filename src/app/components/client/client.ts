@@ -3,11 +3,13 @@ import { FormsModule } from '@angular/forms';
 import { ClientModel } from '../../Model/Class/ClientModel';
 import { ClientService } from '../../Services/client-service';
 import { APIResponseModal } from '../../Model/Interface/role';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-client',
-  imports: [FormsModule],
+  standalone: true,
+  imports: [FormsModule, CommonModule],
   templateUrl: './client.html',
   styleUrl: './client.css',
 })
@@ -37,6 +39,7 @@ export class Client {
    {
       this.clientServices.getAllClients().subscribe((res:  APIResponseModal) =>{
         this.clientList = res.data;
+         console.log("arif = ", this.clientList);
       });
    }
 }

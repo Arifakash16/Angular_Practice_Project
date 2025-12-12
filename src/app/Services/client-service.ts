@@ -12,11 +12,11 @@ import { ClientModel } from '../Model/Class/ClientModel';
 export class ClientService {
   constructor(private http: HttpClient){}
   getAllClients() : Observable<APIResponseModal>{
-    return this.http.get<APIResponseModal>(environment.API_URL + "GetAllDesignation");
+    return this.http.get<APIResponseModal>(environment.API_URL + "GetAllClients");
   }
 
   addUpdate(obj: ClientModel) : Observable<APIResponseModal>{
-    return this.http.post<APIResponseModal>(environment.API_URL + "GetAllDesignation", obj);
+    return this.http.post<APIResponseModal>(environment.API_URL + "AddUpdateClient", obj);
   }
 
    Delete(id: number) : Observable<APIResponseModal>{

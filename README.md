@@ -60,6 +60,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 - Directive -> Structural(ngIf, ngFor) and attribute(ngClass, ngStyle)
 - Using processing bar before the data load from api call
 - Routing (routes, routerroutlet, routerLink, routerLinkActive)
+- Make Service for Client(add,update, delete and Load)
 
 
 ## Additional Resources

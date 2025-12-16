@@ -19,7 +19,7 @@ export class ClientService {
     return this.http.post<APIResponseModal>(environment.API_URL + "AddUpdateClient", obj);
   }
 
-   Delete(id: number) : Observable<APIResponseModal>{
-    return this.http.get<APIResponseModal>(environment.API_URL + "GetClientByClientId?clientId=" + id);
+   deleteClientById(id: number) : Observable<APIResponseModal>{
+    return this.http.delete<APIResponseModal>(environment.API_URL + "DeleteClientByClientId?clientId=" + id);
   }
 }

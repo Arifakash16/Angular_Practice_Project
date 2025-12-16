@@ -23,7 +23,6 @@ export class Client {
    }
    onSaveClient()
    {
-      debugger;
       this.clientServices.addUpdate(this.clientObj).subscribe((res:  APIResponseModal) =>{
         if(res.result){
           alert("Client created successfully");
@@ -41,5 +40,28 @@ export class Client {
         this.clientList = res.data;
          console.log("arif = ", this.clientList);
       });
+   }
+
+   onDelete(id: number)
+   {
+      const isDelete = confirm("Are you sure want to delete?")
+      if(isDelete)
+      {
+          this.clientServices.deleteClientById(id).subscribe((res:  APIResponseModal) =>{
+          if(res.result){
+            alert("Client deleted successfully");
+            this.loadClient();
+          }
+          else{
+            alert(res.message);
+          }
+        });
+      }
+      
+   }
+
+   onEdit(data: ClientModel)
+   {
+      this.clientObj = data;
    }
 }
